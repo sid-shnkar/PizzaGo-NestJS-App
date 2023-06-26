@@ -3,8 +3,11 @@ import { InjectModel } from '@nestjs/mongoose';
 import { PizzaSchemas } from './schemas/pizza-schemas';
 import { Model } from 'mongoose';
 import { CartSchemas } from './schemas/cart-schemas';
-import { MailgunService } from 'nestjs-mailgun';
-import { EmailOptions } from 'nestjs-mailgun';
+import { MailgunService } from '@nextnm/nestjs-mailgun';
+import { EmailOptions } from '@nextnm/nestjs-mailgun';
+import { config } from 'dotenv';
+
+config(); // Load environment variables
 
 @Injectable()
 export class PizzaService {
@@ -73,8 +76,8 @@ export class PizzaService {
 
   async placeOrder(email,cartDetails) {
 
-    const domain = 'sandbox51db1945d1a9430e8f611d90772f6240.mailgun.org';
-    const data = {
+    const domain = process.env.MAILGUN_DOMAIN;
+    const data : EmailOptions = {
       from: 'sidshnkar@gmail.com',
       to: email,
       subject: 'Your Order has been successfully placed!',

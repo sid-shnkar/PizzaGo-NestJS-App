@@ -5,7 +5,11 @@ import { PizzaController } from './pizza.controller';
 import { PizzaService } from './pizza.service';
 import { cartSchemas, CartSchemas } from './schemas/cart-schemas';
 import { pizzaSchema, PizzaSchemas } from './schemas/pizza-schemas';
-import { MailgunModule } from 'nestjs-mailgun';
+import { MailgunModule } from '@nextnm/nestjs-mailgun';
+import { config } from 'dotenv';
+
+config(); // Load environment variables
+
 @Module({
   imports: [
     MongooseModule.forFeature([
@@ -13,8 +17,8 @@ import { MailgunModule } from 'nestjs-mailgun';
       { name: CartSchemas.name, schema: cartSchemas },
     ]),
     MailgunModule.forRoot({
-      username: 'api',
-      key: '9dee715acc86120e202bc953977ac558-1b8ced53-d4069889',
+      username: process.env.MAILGUN_EMAIL_USERNAME,
+      key: process.env.MAILGUN_API_KEY,
     }),
   ],
   controllers: [PizzaController],
