@@ -1,2 +1,2 @@
-* Need to add UI features, the app is working fine with current features
+* Updates completed
 * Do replace MONGO_SRV with your connection string
