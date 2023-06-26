@@ -3,7 +3,7 @@ import classes from './StartingPageContent.module.css';
 const StartingPageContent = () => {
   return (
     <section className={classes.starting}>
-      <h1>Welcome to Pizza Shop!</h1>
+      <h1>Welcome to PizzaGo!</h1>
     </section>
   );
 };

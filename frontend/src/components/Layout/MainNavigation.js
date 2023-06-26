@@ -16,7 +16,7 @@ const MainNavigation = () => {
 
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>Pizza Shop</div>
+      <div className={classes.logo}>PizzaGo</div>
       <nav className={classes.nav}>
         <ul>
         {isLoggedIn &&  <li>
