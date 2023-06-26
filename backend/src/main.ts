@@ -1,5 +1,8 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
+import { config } from 'dotenv';
+
+config(); // Load environment variables
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -12,6 +15,6 @@ async function bootstrap() {
  
  app.use(cors(corsOptions)) // Use this after the variable declaration
  
-  await app.listen(3001);
+  await app.listen(process.env.PORT || 3001);
 }
 bootstrap();
