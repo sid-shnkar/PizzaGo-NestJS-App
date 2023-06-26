@@ -7,10 +7,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #008080;
+  padding: 2rem;
+  border-radius: 10px; /* Add border-radius for curved shape */
+  background-color: #c8e4f4; /* Optional background color for the card */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional box shadow for the card */
 }
 
 .nopizzas p {
-  color: #262c2c;
+  color: #008080;
   font-size: 3rem;
   font-weight: bold;
 }

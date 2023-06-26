@@ -12,14 +12,14 @@
 
 .sorting button {
   font: inherit;
-  color: teal;
+  color: black;
   border: 1px solid teal;
-  background-color: transparent;
+  background-color: #c2fafa;
   border-radius: 4px;
   padding: 0.5rem 1.5rem;
   cursor: pointer;
 }
 
-.sorting button:hover {
+/* .sorting button:hover {
   background-color: #c2fafa;
-}
+} */

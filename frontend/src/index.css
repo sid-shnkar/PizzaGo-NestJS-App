@@ -6,6 +6,9 @@ body {
   font-family: sans-serif;
   margin: 0;
   background-color: #e7f8f8;
+  background-image: url('./assets/pizza-image-three.png'); /* Add the background image URL */
+  background-size: cover; /* Adjust the background image size */
+  background-position: center; /* Adjust the background image position */
 }
 
 .centered {
